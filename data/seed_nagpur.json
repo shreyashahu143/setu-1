@@ -1,0 +1,262 @@
+[
+  {
+    "area_name": "Sitabuldi",
+    "sub_lane_or_landmark": "Modi No. 2",
+    "specialty_goods_or_food": [
+      "Women ethnic wear",
+      "Sarees",
+      "Dress material",
+      "Kurtis",
+      "Readymade blouses"
+    ],
+    "price_band": "Budget to Mid-range (₹300 - ₹2,500)",
+    "bargaining_tactics": "Aggressive counter-offers required; start by offering 50-60% of the quoted sticker price, especially for unstitched materials.",
+    "accessibility_notes": "Very narrow pedestrian lane; strictly two-wheeler or foot access only. Avoid driving four-wheelers.",
+    "category": "Shopping",
+    "status": "verified",
+    "mention_frequency": 15,
+    "upvote_weight": 85,
+    "source_threads": ["r/nagpur: Where to buy traditional clothes", "Nagpur Shopping Guide"]
+  },
+  {
+    "area_name": "Sitabuldi",
+    "sub_lane_or_landmark": "Modi No. 3",
+    "specialty_goods_or_food": [
+      "Mobile screen replacement",
+      "Handset repair",
+      "Tempered glass",
+      "Wholesale mobile phone accessories",
+      "Used smartphones"
+    ],
+    "price_band": "Budget (₹150 tempered glass, ₹1,200 - ₹2,200 display replacement)",
+    "bargaining_tactics": "Compare rates across at least 3 inner shops; street-facing shops charge higher margins than the shops deeper inside the alley.",
+    "accessibility_notes": "Pedestrian and two-wheeler only. High footfall during evening hours (5 PM - 8 PM).",
+    "category": "Tech Repair",
+    "status": "verified",
+    "mention_frequency": 22,
+    "upvote_weight": 110,
+    "source_threads": ["r/nagpur: Best phone repair shop", "Sitabuldi tech megathread"]
+  },
+  {
+    "area_name": "Chitaroli",
+    "sub_lane_or_landmark": "Chitaroli Artisan Quarter",
+    "specialty_goods_or_food": [
+      "Clay idols (murtis)",
+      "Ganesh and Durga festival statues",
+      "Handmade festive decor",
+      "Clay pottery"
+    ],
+    "price_band": "Varies by season (₹500 for small murtis to ₹15,000+ for large installations)",
+    "bargaining_tactics": "Fixed artisan rates during peak festival weeks (Ganesh Chaturthi / Navratri); pre-book 2-3 weeks in advance for reasonable custom orders.",
+    "accessibility_notes": "Extremely congested artisan lanes; park near Central Avenue and walk in.",
+    "category": "Culture",
+    "status": "verified",
+    "mention_frequency": 18,
+    "upvote_weight": 95,
+    "source_threads": ["r/nagpur: Chitaroli artisan tradition", "Nagpur cultural landmarks"]
+  },
+  {
+    "area_name": "Chitaroli",
+    "sub_lane_or_landmark": "Central Avenue Junction / Chitaroli Entrance",
+    "specialty_goods_or_food": [
+      "Late-night hot masala milk (Masala Doodh)",
+      "Kadhai milk with dry fruits",
+      "Traditional sweets"
+    ],
+    "price_band": "Budget (₹40 - ₹70 per kulhad / glass)",
+    "bargaining_tactics": "Fixed price per glass; peak rush starts post 10:00 PM and runs till 1:00 AM.",
+    "accessibility_notes": "Roadside stalls; two-wheeler parking available along the main road edge.",
+    "category": "Food",
+    "status": "verified",
+    "mention_frequency": 14,
+    "upvote_weight": 70,
+    "source_threads": ["r/nagpur: Late night food spots", "Best masala milk in Nagpur"]
+  },
+  {
+    "area_name": "Itwari",
+    "sub_lane_or_landmark": "Kirana & Mirchi Gali",
+    "specialty_goods_or_food": [
+      "Bulk spices",
+      "Dry fruits (almonds, cashews, raisins)",
+      "Saoji masala blends",
+      "Wholesale wedding grocery and sweets"
+    ],
+    "price_band": "Wholesale (20-30% cheaper than supermarkets on 1kg+ quantities)",
+    "bargaining_tactics": "Prices depend on bulk quantity; ask for wholesale rate card (thok bhav) if buying 2kg or more.",
+    "accessibility_notes": "Heavy pungent chili aroma in the air; avoid if prone to respiratory allergies. Heavy commercial handcart traffic.",
+    "category": "Shopping",
+    "status": "verified",
+    "mention_frequency": 12,
+    "upvote_weight": 60,
+    "source_threads": ["r/nagpur: Wholesale grocery and spices"]
+  },
+  {
+    "area_name": "Itwari",
+    "sub_lane_or_landmark": "Sarafa Bazaar & Cloth Market",
+    "specialty_goods_or_food": [
+      "Gold and silver bullion",
+      "Traditional Maharashtrian jewelry (Thushi, Kolhapuri Saaj)",
+      "Bridal silk sarees",
+      "Wholesale clothing"
+    ],
+    "price_band": "High-ticket (Daily MCX bullion rates + making charges; Sarees ₹1,500 - ₹25,000+)",
+    "bargaining_tactics": "Negotiate making charges on jewelry; for sarees, ask for wedding package discounts if buying multiple pieces.",
+    "accessibility_notes": "Strict police patrolling; narrow crowded lanes. Park at designated Itwari railway station/market lots.",
+    "category": "Shopping",
+    "status": "verified",
+    "mention_frequency": 16,
+    "upvote_weight": 80,
+    "source_threads": ["r/nagpur: Buying wedding jewelry in Itwari"]
+  },
+  {
+    "area_name": "Gandhibagh",
+    "sub_lane_or_landmark": "Gandhibagh Wholesale Textile Market",
+    "specialty_goods_or_food": [
+      "Unstitched fabric rolls",
+      "School and corporate uniform cloth",
+      "Wedding suiting and shirting",
+      "Curtain and upholstery material"
+    ],
+    "price_band": "Wholesale to Mid-range (₹80 - ₹600 per meter)",
+    "bargaining_tactics": "Traders prioritize full bale/roll purchases; negotiate firmly if purchasing by the meter for personal wear.",
+    "accessibility_notes": "Loaded goods tempos frequently block lanes. Sunday afternoon half-day closures are common.",
+    "category": "Shopping",
+    "status": "verified",
+    "mention_frequency": 9,
+    "upvote_weight": 45,
+    "source_threads": ["r/nagpur: Best fabric wholesale market"]
+  },
+  {
+    "area_name": "Dharampeth",
+    "sub_lane_or_landmark": "West High Court (WHC) Road",
+    "specialty_goods_or_food": [
+      "Upscale cafes",
+      "Boutique bakeries",
+      "Branded jewelry showrooms (Tanishq, Batukbhai)",
+      "Fine dining and continental cuisine"
+    ],
+    "price_band": "Premium (₹400 - ₹1,200 per head dining)",
+    "bargaining_tactics": "Fixed showroom pricing; ask for seasonal membership points or card discount offers.",
+    "accessibility_notes": "Broad roads with designated pay-and-park zones; easy four-wheeler access and calm pedestrian sidewalks.",
+    "category": "Culture",
+    "status": "verified",
+    "mention_frequency": 20,
+    "upvote_weight": 125,
+    "source_threads": ["r/nagpur: Cafes in Dharampeth", "Elite residential areas"]
+  },
+  {
+    "area_name": "Sadar",
+    "sub_lane_or_landmark": "Mount Road & Residency Road",
+    "specialty_goods_or_food": [
+      "Non-veg kebab stalls",
+      "Biryani spots",
+      "Street fast food (rolls, momos)",
+      "Late evening ice cream and dessert parlors"
+    ],
+    "price_band": "Budget to Mid-range (₹100 - ₹350 per head)",
+    "bargaining_tactics": "Fixed menu pricing; look for places with visible local turnover for fresh barbecue and kebabs.",
+    "accessibility_notes": "Very busy after 7:30 PM. Parking is challenging on Mount Road on weekends; use Sadar multi-level parking.",
+    "category": "Food",
+    "status": "verified",
+    "mention_frequency": 25,
+    "upvote_weight": 140,
+    "source_threads": ["r/nagpur: Sadar food street recommendations"]
+  },
+  {
+    "area_name": "Dhantoli",
+    "sub_lane_or_landmark": "Yashwant Stadium Complex",
+    "specialty_goods_or_food": [
+      "Assembled PC desktop parts",
+      "Laptop hardware repair",
+      "Printers and ink refills",
+      "Gym dumbbells, weights, and sports goods"
+    ],
+    "price_band": "Competitive market rate (Parts priced matching online Nehru Place / Lamington rates)",
+    "bargaining_tactics": "Bring written component price quotes from online sites (Amazon/MDComputers); shops will match or beat them.",
+    "accessibility_notes": "Stands directly opposite Yashwant Stadium; ample parking inside stadium perimeter grounds.",
+    "category": "Tech Repair",
+    "status": "verified",
+    "mention_frequency": 11,
+    "upvote_weight": 55,
+    "source_threads": ["r/nagpur: Where to assemble custom PC"]
+  },
+  {
+    "area_name": "Mahal",
+    "sub_lane_or_landmark": "Badkas Chowk & Tilak Putla",
+    "specialty_goods_or_food": [
+      "Traditional Maharashtrian puja items",
+      "Brass and copper utensils (Tamhan, Samai)",
+      "Traditional spices and papad",
+      "Ayurvedic and herb shops"
+    ],
+    "price_band": "Budget to Mid-range (Utensils sold by weight + nominal craftsmanship fee)",
+    "bargaining_tactics": "Utensils are weighed on a scale; negotiate the making fee per kilogram rather than the base metal price.",
+    "accessibility_notes": "Historic narrow core of Old Nagpur. Best navigated on foot or via e-rickshaws from Gandhi Gate.",
+    "category": "Culture",
+    "status": "verified",
+    "mention_frequency": 13,
+    "upvote_weight": 65,
+    "source_threads": ["r/nagpur: Traditional brass shops in Mahal"]
+  },
+  {
+    "area_name": "Khamla",
+    "sub_lane_or_landmark": "Khamla Main Vegetable Market",
+    "specialty_goods_or_food": [
+      "Fresh farm vegetables and leafy greens",
+      "Local seasonal fruits",
+      "Evening street snacks (Tarri Samosa, Chaat)"
+    ],
+    "price_band": "Budget (Weekly wholesale-linked grocery pricing)",
+    "bargaining_tactics": "Negotiate per-kilo discounts when buying bundles; prices drop significantly after 8:30 PM as vendors clear stock.",
+    "accessibility_notes": "Intensely crowded between 6:00 PM and 8:30 PM. Pedestrian entry recommended.",
+    "category": "Food",
+    "status": "verified",
+    "mention_frequency": 8,
+    "upvote_weight": 40,
+    "source_threads": ["r/nagpur: Best fresh vegetable markets"]
+  },
+  {
+    "area_name": "Pratap Nagar",
+    "sub_lane_or_landmark": "VNIT College Gate & Telecom Nagar Road",
+    "specialty_goods_or_food": [
+      "Low-cost engineering photocopy and thesis binding",
+      "Academic stationery",
+      "Student mess and tiffin services",
+      "Budget poha and chai points"
+    ],
+    "price_band": "Student Budget (₹1 per copy, ₹60 - ₹90 per full daily meal tiffin)",
+    "bargaining_tactics": "Bulk rates available for printing (>100 pages); monthly tiffin discounts on upfront semester booking.",
+    "accessibility_notes": "Wide avenues; two-wheeler friendly with frequent auto connections to Hingna Road.",
+    "category": "Services",
+    "status": "verified",
+    "mention_frequency": 10,
+    "upvote_weight": 50,
+    "source_threads": ["r/nagpur: Student survival near VNIT"]
+    },
+    {
+        "area_name": "Sitabuldi",
+        "sub_lane_or_landmark": "Sitabuldi Main Road (Bardi Footpath)",
+        "specialty_goods_or_food": ["Casual footwear and slippers","Budget jeans, t-shirts, and belts","Phone covers","Bags, backpacks, and umbrellas"],
+        "price_band": "Flea Market Budget (₹100 - ₹500 items)",
+        "bargaining_tactics": "Start your counter-offer at 40-50% of the first asked quote; walking away will often get you the deal.",
+        "accessibility_notes": "Vehicle-free pedestrian walking plaza during shopping hours. Keep your wallet and phone secure due to crowds.",
+        "category": "Shopping",
+        "status": "verified",
+        "mention_frequency": 30,
+        "upvote_weight": 160,
+        "source_threads": ["r/nagpur: Sitabuldi street shopping hacks"]
+    },
+    {
+        "area_name": "Sitabuldi",
+        "sub_lane_or_landmark": "Sitabuldi Metro Interchange",
+        "specialty_goods_or_food": ["Metro transit transfer between Aqua (East-West) and Orange (North-South) lines","Ticketing helpdesk and Maha Card recharge","Connectivity to Nagpur Railway Station and Cotton Market"],
+        "price_band": "Transit Fare (₹10 - ₹35 standard ticket)",
+        "bargaining_tactics": "Fixed statutory RTO/Metro fare; use Maha Metro mobile app or smart card to save 10% on every journey.",
+        "accessibility_notes": "Full elevator and escalator accessibility; prime transit junction for newcomers without personal vehicles.",
+        "category": "Services",
+        "status": "verified",
+        "mention_frequency": 19,
+        "upvote_weight": 105,
+        "source_threads": ["r/nagpur: Metro routes and interchange guide"]
+    }
+]
