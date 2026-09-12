@@ -12,6 +12,7 @@ class StreetInsightNode(BaseModel):
     
     # Trust and Quarantine metadata
     status: Literal["verified", "unverified", "quarantine"] = "verified"
+    confidence_score: float = Field(default=0.0, ge=0.0, le=1.0)
     mention_frequency: int = Field(default=1)
     upvote_weight: int = Field(default=0)
     source_threads: List[str] = Field(default_factory=list)

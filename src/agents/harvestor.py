@@ -115,27 +115,22 @@ def auto_write_to_chroma(node: StreetInsightNode):
     except Exception as e:
         logger.error(f"Failed to auto-persist node to ChromaDB collection: {e}")
 
+
 def harvester_node(state: AgentState) -> dict:
     query = state.get("raw_query", "")
-    snippets = search_community_discussions(query, max_results=5)
     
-    if not snippets:
-        return {"harvested_data": None}
-
-    prompt = f"{HARVESTER_SYSTEM_PROMPT}\n\nSearch Snippets:\n{snippets}\n\nOriginal Query: {query}"
+    print(f"🚜 [HARVESTER] Activated for query: '{query}'")
+    print(f"⏳ [HARVESTER] Starting deep web search... (This may take 10-20s)")
     
-    # Execution block with high-availability model fallback
     try:
-        try:
-            logger.info("Attempting processing via primary engine (Gemini 3.8 Flash)...")
-            response = primary_llm.invoke(prompt)
-        except Exception as e:
-            if "503" in str(e) or "UNAVAILABLE" in str(e):
-                logger.warning("Primary engine experiencing high demand (503). Instantly failing over to stable backup...")
-                response = backup_llm.invoke(prompt)
-            else:
-                raise e
-                
+        snippets = search_community_discussions(query, max_results=5)
+        
+        if not snippets or len(snippets.strip()) < 20:
+            print("⚠️ [HARVESTER] Search returned empty results.")
+            return {"cache_status": "CACHE_MISS", "harvested_data": None}
+
+        print(f"✅ [HARVESTER] Retrieved data footprint. Parsing with Gemini...")
+        response = primary_llm.invoke(HARVESTER_SYSTEM_PROMPT)
         raw_text = extract_text_from_content(response.content)
         cleaned = raw_text.strip().replace("```json", "").replace("```", "").strip()
         extracted = json.loads(cleaned)
@@ -148,7 +143,6 @@ def harvester_node(state: AgentState) -> dict:
         if (
             validated_node.sub_lane_or_landmark 
             and validated_node.confidence_score >= 0.65
-            and "nagpur" in str(snippets).lower()
         ):
             auto_write_to_chroma(validated_node)
             return {"harvested_data": validated_node.model_dump()}
