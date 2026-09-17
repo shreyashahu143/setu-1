@@ -16,19 +16,27 @@ logger = logging.getLogger(__name__)
 
 api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
 
-# Primary: The cutting-edge reasoning model
+# Primary: High-speed, modern Gemini 3.6 Flash
 primary_llm = ChatGoogleGenerativeAI(
-    model="gemini-3.8-flash",
+    model="gemini-3.6-flash",
     google_api_key=api_key,
     temperature=0.1
 )
 
-# Resilient Fallback: Highly available, ultra-stable production model
+# Resilient Fallback: Ultra-light, highly available Gemini 3.5 Flash-Lite
 backup_llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
+    model="gemini-3.5-flash-lite",
     google_api_key=api_key,
     temperature=0.1
 )
+
+def invoke_harvester_llm(prompt: str):
+    """Invokes primary Gemini model with automatic failover to backup model."""
+    try:
+        return primary_llm.invoke(prompt)
+    except Exception as primary_err:
+        logger.warning(f"Primary Gemini model failed ({primary_err}). Failing over to backup model...")
+        return backup_llm.invoke(prompt)
 
 HARVESTER_SYSTEM_PROMPT = """You are an expert local knowledge extraction agent for Nagpur, Maharashtra.
 Analyze the following deep webpage scrapes and extract ground-truth commercial street insights.
@@ -119,18 +127,25 @@ def auto_write_to_chroma(node: StreetInsightNode):
 def harvester_node(state: AgentState) -> dict:
     query = state.get("raw_query", "")
     
-    print(f"🚜 [HARVESTER] Activated for query: '{query}'")
-    print(f"⏳ [HARVESTER] Starting deep web search... (This may take 10-20s)")
+    print(f"[HARVESTER] Activated for query: '{query}'")
+    print(f"[HARVESTER] Starting web search...")
     
     try:
-        snippets = search_community_discussions(query, max_results=5)
+        snippets = search_community_discussions(query, max_results=3)
         
         if not snippets or len(snippets.strip()) < 20:
-            print("⚠️ [HARVESTER] Search returned empty results.")
+            print("[HARVESTER] Search returned empty results.")
             return {"cache_status": "CACHE_MISS", "harvested_data": None}
 
-        print(f"✅ [HARVESTER] Retrieved data footprint. Parsing with Gemini...")
-        response = primary_llm.invoke(HARVESTER_SYSTEM_PROMPT)
+        # Inject both the query and the retrieved search results into the prompt (capped at 4000 chars for speed)
+        full_prompt = (
+            f"{HARVESTER_SYSTEM_PROMPT}\n\n"
+            f"User Query: \"{query}\"\n\n"
+            f"Live Scraped Web Context & Market Snippets:\n"
+            f"{snippets[:4000]}\n\n"
+            f"Extract the specific market street insights for this query strictly following the JSON schema above."
+        )
+        response = invoke_harvester_llm(full_prompt)
         raw_text = extract_text_from_content(response.content)
         cleaned = raw_text.strip().replace("```json", "").replace("```", "").strip()
         extracted = json.loads(cleaned)

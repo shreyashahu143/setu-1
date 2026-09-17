@@ -4,11 +4,11 @@ import logging
 from src.schemas.state import AgentState
 from src.tools.db_tools import query_street_nodes
 
-# Safe threshold: anything <= 0.65 is a valid semantic hit
-SIMILARITY_THRESHOLD = 0.55
+# Distance threshold: distance <= 0.50 is a valid cache hit (lower distance = better match)
+SIMILARITY_THRESHOLD = 0.50
 
 def scout_node(state: AgentState) -> dict:
-    query = state.get("raw_query", "")
+    query = state.get("raw_query", "").strip(" \"'")
     best_match, distance = query_street_nodes(query, top_k=1)
     
     print(f"[DEBUG scout_node] Query: '{query}' | Distance: {distance} | Threshold: {SIMILARITY_THRESHOLD}")
